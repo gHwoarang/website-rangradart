@@ -1,26 +1,26 @@
 :root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #ee3577;
-    --red: #dc3545;
-    --orange: #f68e62;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #767575;
-    --gray-dark: #434242;
-    --primary: #6f42c1;
-    --secondary: #4f4f4f;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #c2c2c2;
+    --blue: #111111;
+    --indigo: #111111;
+    --purple: #111111;
+    --pink: #111111;
+    --red: #111111;
+    --orange: #111111;
+    --yellow: #111111;
+    --green: #111111;
+    --teal: #111111;
+    --cyan: #111111;
+    --white: #ffffff;
+    --gray: #6b6b6b;
+    --gray-dark: #1a1a1a;
+    --primary: #111111;
+    --secondary: #2d2d2d;
+    --success: #111111;
+    --info: #111111;
+    --warning: #111111;
+    --danger: #111111;
+    --light: #f3f3f1;
     --lightgray: #eeeeee;
-    --dark: #434242;
+    --dark: #111111;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -47,10 +47,12 @@ html {
 }
 body {
     color: var(--secondary);
-    overflow-x: hidden
+    overflow-x: hidden;
+    background: #f7f7f5;
+    font-family: "Segoe UI", sans-serif;
 }
 a{
-    color: var(--pink);
+    color: var(--gray-dark);
 }
 h1,
 h2,
@@ -59,14 +61,16 @@ h4,
 h5,
 h6 {
     color: var(--gray-dark);
-    font-weight: bold
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .btn {
-    font-weight: bold;
-    padding: .375rem 1rem;
-    height: 2.75rem;
-    transition: all 0.4s ease-in-out
+    font-weight: 700;
+    padding: .625rem 1.2rem;
+    height: auto;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0;
 }
 
 
@@ -76,22 +80,31 @@ h6 {
 }
 
 .btn-primary {
-    color: #fff
+    color: #fff;
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: #000;
+    border-color: #000;
 }
 
 .form-control {
     padding-top: 0.875rem;
     padding-bottom: 0.875rem;
     height: 2.75rem;
-    border-color: var(--light)
+    border-color: #e5e5e5;
+    border-radius: 0;
+    background: #fff;
 }
 
 .theme-bg-light {
-    background: var(--light) !important
+    background: #f4f4f2 !important
 }
 
 .theme-bg-dark {
-    background: var(--dark) !important
+    background: #111111 !important
 }
 
 .header {
@@ -100,25 +113,30 @@ h6 {
     top: 0;
     height: 100vh;
     width: var(--sidebar-width);
-    background: var(--primary);
-    color: #fff
+    background: #ffffff;
+    color: var(--gray-dark);
+    border-right: 1px solid #eceae5;
 }
 .header .site-title {
-    color:var(--white);
-    font-size:1.2em;
-    display:block;
+    color: var(--gray-dark);
+    font-size: 1.2em;
+    display: block;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .header .btn-primary {
-    background: rgba(0, 0, 0, 0.3);
-    border-color: transparent;
+    background: var(--primary);
+    border-color: var(--primary);
     font-size: 1rem;
-    padding-top: 0.5rem
+    padding-top: 0.7rem;
+    border-radius: 0;
 }
 
 .header .btn-primary:hover {
-    background: rgba(0, 0, 0, 0.4);
-    border-color: transparent
+    background: #000;
+    border-color: #000;
 }
 
 .header .navbar {
@@ -126,8 +144,9 @@ h6 {
 }
 
 .header .navbar-dark .navbar-toggler {
-    border: none;
-    padding: .25rem .6rem
+    border: 1px solid #e7e7e5;
+    padding: .25rem .6rem;
+    background: #fff;
 }
 
 .header .navbar-dark .navbar-toggler:hover {
@@ -137,15 +156,17 @@ h6 {
 }
 
 .header .navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(256,256,256, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(17,17,17, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .header .nav-item {
-    font-weight: bold
+    font-weight: 600;
 }
 
 .header .nav-item.active .nav-link {
-    color: rgba(0, 0, 0, 0.5)
+    color: #111;
+    background: #f3f3f1;
+    border-left: 3px solid #111;
 }
 
 .header .nav-item.active .nav-link:hover {
@@ -153,15 +174,18 @@ h6 {
 }
 
 .header .nav-item .nav-link {
-    color: rgba(255, 255, 255, 0.8)
+    color: rgba(17, 17, 17, 0.8);
+    padding: .75rem 1rem;
 }
 
 .header .nav-item .nav-link:hover {
-    text-decoration: underline;
-    color: rgba(0, 0, 0, 0.6)
+    text-decoration: none;
+    color: #111;
+    background: #f7f7f5;
 }
 .logo{
     width:78px;
+    filter: grayscale(1);
 }
 .social-list a {
     width: 32px;
@@ -171,12 +195,13 @@ h6 {
     text-align: center;
     border-radius: 50%;
     transition: all 0.2s ease-in-out;
-    background-color: #fff
+    background-color: #f3f3f1;
+    color: #111;
 }
 
 .social-list a:hover {
-    color: var(--secondary);
-    background-color: rgba(255, 255, 255, 0.8)
+    color: #111;
+    background-color: #eaeae6
 }
 
 .main-wrapper {
@@ -192,26 +217,29 @@ h6 {
     top:0;
     z-index:9999;
     transition:all .2s;
+    background: #f5f5f3 !important;
+    border-bottom: 1px solid #eceae5;
 }
 .sticky{
     padding:1em 0 !important;
 }
 .page-title .heading {
-    font-size: 2rem;
-    font-weight: bold;
-    color:white;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: -0.03em;
 }
 
 .footer {
-    color: rgba(255, 255, 255, 0.7)
+    color: rgba(255, 255, 255, 0.7);
+    background: #111 !important;
 }
 
 .footer a {
     color: #fff
 }
 .gradient{
-    background: rgb(43,43,43);
-    background: linear-gradient(151deg, var(--orange) 0%, var(--pink) 35%,var(--primary) 100%) !important;
+    background: #f3f3f1 !important;
 }
 .content .post .title {
     font-size: 1.275rem
@@ -236,6 +264,13 @@ h6 {
 
 .content .post .more-link {
     font-size: var(--font-small);
+}
+
+.card {
+    border: 1px solid #eeeeee;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
 }
 
 .meta {

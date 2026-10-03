@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title data-i18n="titleShop">Alışveriş | rangradArt</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="rangradArt mağazasını keşfedin." data-i18n-content="descriptionShop">
+    <link rel="shortcut icon" href="images/leokirmizi.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="site-logo" href="index.html" aria-label="rangradArt ana sayfa" data-i18n-aria-label="brandHome">
+            <img src="images/leokirmizi.png" alt="">
+        </a>
+        <a class="site-title" href="index.html">rangradArt</a>
+        <div class="language-switch" role="group" aria-label="Dil seçimi" data-i18n-aria-label="languageSelect">
+            <button type="button" data-language="en" aria-pressed="false">EN</button>
+            <button type="button" data-language="tr" aria-pressed="true">TR</button>
+        </div>
+        <nav class="navbar navbar-expand-lg" aria-label="Ana menü" data-i18n-aria-label="mainMenu">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html" data-i18n="navBlog">Blog</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="shop.html" aria-current="page" data-i18n="navShop">Alışveriş</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main-wrapper">
+        <main class="content px-3 py-5">
+            <div class="container text-center">
+                <h2 data-i18n="shopComingSoon">Mağaza hazırlanıyor</h2>
+                <p class="text-muted" data-i18n="shopDescription">Ürünler ve alışveriş seçenekleri burada yakında yer alacak.</p>
+            </div>
+        </main>
+        <footer class="footer text-center py-2 theme-bg-dark">
+            <p class="copyright" data-i18n="copyright">&copy; 2026 Tüm hakları saklıdır.</p>
+        </footer>
+    </div>
+    <script src="js/i18n.js"></script>
+</body>
+</html>
